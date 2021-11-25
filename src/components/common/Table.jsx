@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { getAge } from "../../shared/utils";
 const MessageRow = styled.tr`
   text-align:center
   vertical-align: middle;
@@ -49,7 +50,7 @@ const ListTable = ({ columns, data }) => {
               <tr key={index}>
                 <td>{applicant.name}</td>
                 <td>{applicant.email}</td>
-                <td>{applicant.age}</td>
+                <td>{getAge(applicant.birth_date)}</td>
                 <td>{applicant.year_of_experience}</td>
                 <td>{applicant.position_applied}</td>
                 <td>{applicant.application_date}</td>
